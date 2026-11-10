@@ -1,0 +1,39 @@
+{
+  "name": "agentuse-synap-provider",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Synap model provider plugin for AgentUse.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "agentuse-plugin",
+    "synap",
+    "model-provider"
+  ],
+  "peerDependencies": {
+    "agentuse": ">=0.24.0"
+  },
+  "devDependencies": {
+    "@types/bun": "1.3.5",
+    "agentuse": "0.24.0",
+    "typescript": "5.9.3"
+  },
+  "agentuse": {
+    "apiVersion": 1,
+    "extensions": [
+      "./index.ts"
+    ],
+    "providers": [
+      {
+        "id": "synap",
+        "auth": [
+          "api_key"
+        ]
+      }
+    ]
+  }
+}
